@@ -1,0 +1,53 @@
+.gradientOverlay {
+    position: relative;
+    flex: 2
+}
+
+.gradientOverlay::after {
+    background:linear-gradient(to left, rgba(0, 0, 0, 0) 50%, black 100%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+}
+
+.gradientBubbleOne {
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    user-select: none;
+    width: 100%;
+    height: 30%;
+    filter: blur(92px);
+    transform: rotate(30deg) translateZ(0);
+    border-radius: 10%;
+    max-height: 400px;
+    background: linear-gradient( 90deg, rgba(255, 205, 159, 0.5) 25%, rgba(119, 222, 255, 0.4) 50%, rgba(221, 14, 255, 0.15) 75% );
+}
+
+.gradientBubbleTwo {
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    user-select: none;
+    width: 100%;
+    height: 30%;
+    filter: blur(100px);
+    transform: rotate(-30deg) translateZ(0);
+    border-radius: 10%;
+    max-height: 400px;
+    background: linear-gradient(90deg, rgba(255, 205, 159, 0.5) 25%, rgba(119, 222, 255, 0.4) 50%, rgba(221, 14, 255, 0.15) 75% );
+}
+
+.proHighlight {
+    -webkit-text-fill-color: transparent; 
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, rgba(255, 205, 159, 0.5) 0%, rgba(119, 222, 255, 0.4) 46%, rgba(221, 14, 255, 0.15) 100%);
+    background-clip: text;
+}
+
+.overviewHeader {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px;
+    color: white;
+}
