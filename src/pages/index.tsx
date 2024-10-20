@@ -31,7 +31,7 @@ const Home: NextPage = () => {
                 <h1
                   style={{ lineHeight: 1.1 }}
                   className="md:text-7xl text-5xl font-medium text-white">
-                    South Brunswick Computer Science Club
+                    McGill Quantitative Research Club
                 </h1>
                 <h2
                   className="md:text-xl text-lg text-white font-light text-opacity-60">
