@@ -141,7 +141,7 @@ const Home: NextPage = () => {
                     "/sbcsclub/workshops/rust.png"
                   ]}
                   teachers="Shahrian Masud, Mohammad Sadiq, Sreeram Vuppala"
-                  name={"Intro to Rust"}
+                  name={"Algorithmic Programming"}
               />
                <Workshop 
                   setWorkshop={setWorkshop}
@@ -151,7 +151,7 @@ const Home: NextPage = () => {
                     "/sbcsclub/workshops/roblox.png"
                   ]}
                   teachers="Anika Thakur, Esha Vigneswaran, Tejas Raghuram"
-                  name={"Roblox Game Dev"}
+                  name={"Risk Management"}
               />
                <Workshop 
                   setWorkshop={setWorkshop}
@@ -161,7 +161,7 @@ const Home: NextPage = () => {
                     "/sbcsclub/workshops/cloud-services.png"
                   ]}
                   teachers="Mahit Mehta, Ali Azam, Diya Shah"
-                  name={"Cloud Services"}
+                  name={"Data Science"}
               />
               <Workshop 
                   setWorkshop={setWorkshop}
@@ -171,17 +171,7 @@ const Home: NextPage = () => {
                     "/sbcsclub/workshops/web-scraping.png"
                   ]}
                   teachers="Vivaan Shah, Abhik Mojumdar, Armaan Sarkhel"
-                  name={"Web Scraping"}
-              />
-               <Workshop 
-                  setWorkshop={setWorkshop}
-                  workshop={workshop}
-                  description="We will teach the key elements of the Flutter framework, such as state management, navigation, and http request handling. By the end, participants will have several small projects that they can put on their resume, as will as have knowledge of the basics of the Flutter framework."
-                  images={[
-                    "/sbcsclub/workshops/flutter.png"
-                  ]}
-                  teachers="Aarnav Srivastava, Anoushka Abroal, Krisha Shah"
-                  name={"Flutter App Development"}
+                  name={"Financial Engineering"}
               />
             </div>
           </section>
