@@ -66,6 +66,7 @@ const Home: NextPage = () => {
                     objectFit="contain" 
                     width={450} 
                     height={450} 
+                    alt={`logo`} // Add the alt attribute here
                   />
                 </div>
               </div>
