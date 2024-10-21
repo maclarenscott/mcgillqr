@@ -38,13 +38,13 @@ const Navbar = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="#overview">
-                            Overview
+                        <a href="/about">
+                            About
                         </a>
                     </li>
                     <li>
-                        <a href="#workshops">
-                            Workshops
+                        <a href="/join_us">
+                            Join Us
                         </a>
                     </li>
                 </ul>
