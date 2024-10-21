@@ -26,6 +26,9 @@ jobs:
           
           # Pull the latest code from master
           git pull origin master
+
+          #install deps
+          npm install
           
           # Rebuild the project
           npm run build
