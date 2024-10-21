@@ -26,11 +26,11 @@ const Navbar = () => {
             }}
             className="fixed px-3 py-2 w-full z-50 transition-all">
             <nav className="flex justify-center items-center">
-                <div style={{ 
+                {/* <div style={{ 
                     height: minimized ? 50 :  100, width: minimized ? 50 :  100 
                 }} className="relative transition-all duration-300">
                     <Image src={"/sbcsclub/mcgill_qr.png"} layout="fill" objectFit="contain" />
-                </div>
+                </div> */}
                 <ul className="text-white flex space-x-6 p-2">
                     <li>
                         <a href="#home">
