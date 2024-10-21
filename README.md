@@ -9,4 +9,4 @@ Current Repo for McGill Quantitative Research Club Webpage.
 
 # Deploy
 
-Push to the main branch
+Run deployment github action
