@@ -1,7 +1,7 @@
 name: Deploy to Server
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:  # Manual trigger
 
 jobs:
   deploy:
@@ -18,7 +18,17 @@ jobs:
         username: ${{ secrets.SERVER_USER }}
         password: ${{ secrets.SERVER_PASSWORD }}
         script: |
+          # Stop the process using port 3000
+          fuser -k 3000/tcp || true
+          
+          # Navigate to the project directory
           cd /home/mcgillqr
+          
+          # Pull the latest code from master
           git pull origin master
+          
+          # Rebuild the project
           npm run build
+          
+          # Start the project
           npm run start
