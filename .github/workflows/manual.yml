@@ -21,8 +21,6 @@ jobs:
           # Exit if any command fails
           set -e
           
-          # Stop the process using port 3000
-          fuser -k 3000/tcp || true
           
           # Navigate to the project directory
           cd /home/mcgillqr
@@ -35,6 +33,9 @@ jobs:
           
           # Rebuild the project
           npm run build
+
+          # Stop the process using port 3000
+          fuser -k 3000/tcp || true
           
           # Start the project in the background
           nohup npm run start &> /dev/null &
