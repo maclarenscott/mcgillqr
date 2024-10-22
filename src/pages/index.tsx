@@ -15,7 +15,7 @@ import Footer from "../components/Footer";
 const Home: NextPage = () => {
   const landingContainerRef = useRef<HTMLDivElement | null>(null);
 
-  const [ workshop, setWorkshop ] = useState<string | null>(null);
+  const [workshop, setWorkshop] = useState<string | null>(null);
 
   return (
     <>
@@ -26,147 +26,164 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <main className="mx-auto flex min-h-screen overflow-hidden w-full flex-col items-center justify-center">
-          <section id="home" ref={landingContainerRef} className="flex container p-5 relative justify-center lg:flex-row flex-col-reverse items-center w-full min-h-screen">
-              <div className={`${HomeStyles.gradientBubbleOne}`}></div>
-              <div className="flex-1 justify-center z-20 space-y-6 flex flex-col items-start w-full">
-                <h1
-                  style={{ lineHeight: 1.1 }}
-                  className="md:text-7xl text-5xl font-medium text-white">
-                    McGill Quantitative Research Club
-                </h1>
-                <h2
-                  className="md:text-xl text-lg text-white font-light text-opacity-60">
-                    Providing students with practical quant research experience and meaningful industry exposure.
-                </h2>
-                <div className="space-x-6 flex">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxRC7RDKSa-dcPKMs0acPjmDk2Mastl6UnUKEBRxJnInd8qw/viewform?usp=sf_link" rel="noopener noreferrer nofollow" target={"_blank"}>
-                    <button className="bg-white transition-opacity hover:opacity-50 rounded-full px-8 py-3">
-                      Join Us
-                    </button>
-                  </a>
-                </div>
-                <div className="my-2 px-3 h-8 w-full relative flex space-x-6">
-                  <a href={"https://www.instagram.com/mcgill_qr/"} target="_blank" rel="noopener noreferrer nofollow">
-                    <FontAwesomeIcon icon={faInstagram} height={35} color="white" />
-                  </a>
-                  <a href={"https://www.linkedin.com/company/mcgillqr/"} target="_blank" rel="noopener noreferrer nofollow">
-                    <FontAwesomeIcon icon={faLinkedin} height={35} color="white" />
-                  </a>
-                  <a href={"mailto:info@mcgillqr.com"} target="_blank" rel="noopener noreferrer nofollow">
-                    <FontAwesomeIcon icon={faEnvelope} height={35} color="white" />
-                  </a>
-                </div>
-              </div>
-              <div className="flex-1 flex mt-16 relative justify-center max-h-[1000px] items-center">
-                <div className="lg:absolute lg:scale-150 z-10">
-                  <Image 
-                    src={"/sbcsclub/mcgill_qr.png"} 
-                    quality={100} 
-                    objectFit="contain" 
-                    width={450} 
-                    height={450} 
-                    alt={`logo`} // Add the alt attribute here
-                  />
-                </div>
-              </div>
-          </section>
-          <section id="overview" className="min-h-[500px] mb-[100px] items-center flex flex-col-reverse lg:flex-row max-w-7xl px-6 md:px-3">
-          <div className="flex-1 relative flex justify-center items-center">
-            {/* Photo Section */}
-            <Image 
-              src="../../../trottier.jpg" 
-              alt="Descriptive alt text" 
-              className="w-full h-full object-cover mx-5 lg:mr-10 lg:mx-0"
-            />
-          </div>
-            <div className="flex-1 my-[100px] lg:my-0 space-y-6">
-              <h1
-                style={{ lineHeight: 1.1 }}
-                className="md:text-7xl text-5xl font-medium text-white">
-                 <span className={`${HomeStyles.overviewHeader}`}></span>About Us
-              </h1>
-              <p className="md:text-xl text-lg text-white font-light text-opacity-60">
-                <span className={HomeStyles.proHighlight}>McGill Quantitative Research</span> is a student-led initiative comprised of McGill’s brightest statistics, math, and computer science students.
-              </p>
-
-              <p className="md:text-xl text-lg text-white font-light text-opacity-60">
-                Through mentorship and hands-on projects, we prepare members for successful careers in&nbsp;
-                <span className={HomeStyles.proHighlight}>quantitative finance</span>, bridging the gap between academic theory and&nbsp;
-                <span className={HomeStyles.proHighlight}>real-world application</span>.
-              </p>
-
-              <p className="md:text-xl text-lg text-white font-light text-opacity-60">
-                Our members collaborate on quant research projects, publish their findings, and connect with industry professionals. We are building a community where students advance their skills in&nbsp;
-                <span className={HomeStyles.proHighlight}>algorithmic programming</span>,&nbsp;
-                <span className={HomeStyles.proHighlight}>data science</span>,&nbsp;
-                <span className={HomeStyles.proHighlight}>financial engineering</span>, and&nbsp;
-                <span className={HomeStyles.proHighlight}>risk management</span>.
-            </p>
-            </div>
-          </section>
-          <section id="workshops" className="min-h-screen my-6 flex-col space-y-3 flex max-w-7xl relative justify-center items-center" >
-            <div className={`${HomeStyles.gradientBubbleTwo}`}></div>
+        <section id="home" ref={landingContainerRef} className="flex container p-5 relative justify-center lg:flex-row flex-col-reverse items-center w-full min-h-screen mb-20 md:mb-24">
+          <div className={`${HomeStyles.gradientBubbleOne}`}></div>
+          <div className="flex-1 justify-center z-20 space-y-6 flex flex-col items-start w-full">
             <h1
               style={{ lineHeight: 1.1 }}
               className="md:text-7xl text-5xl font-medium text-white">
-                <span className={`${HomeStyles.proHighlight}`}></span>Research Areas
+              McGill Quantitative Research Club
             </h1>
             <h2
-              className="md:text-xl px-6 md:px-0 text-lg text-white font-light text-center text-opacity-60">
-                Our goal is to pursue exploratory projects and showcase our findings in these areas
+              className="md:text-xl text-lg text-white font-light text-opacity-60">
+              Providing students with practical quant research experience and meaningful industry exposure.
             </h2>
-            <div className="min-h-screen content-start flex w-full flex-wrap justify-center items-center">
-              <Workshop 
-                  setWorkshop={setWorkshop}
-                  workshop={workshop}
-                  description=""
-                  images={
-                    [
-                    // "/sbcsclub/workshops/rust.png"
-                  ]
-                }
-                  teachers="Teaching computers to trade better than humans."
-                  name={"Algorithmic Trading"}
-              />
-               <Workshop 
-                  setWorkshop={setWorkshop}
-                  workshop={workshop}
-                  description=""
-                  images={
-                    [
-                    // "/sbcsclub/workshops/roblox.png"
-                  ]
-                }
-                  teachers="Quantifying and managing the risk associated with investing."
-                  name={"Risk Management"}
-              />
-               <Workshop 
-                  setWorkshop={setWorkshop}
-                  workshop={workshop}
-                  description=""
-                  images={
-                    [
-                    // "/sbcsclub/workshops/cloud-services.png"
-                  ]
-                }
-                  teachers="Using data to drive investment decisions."
-                  name={"Data Science"}
-              />
-              <Workshop 
-                  setWorkshop={setWorkshop}
-                  workshop={workshop}
-                  description=""
-                  images={
-                    [
-                    // "/sbcsclub/workshops/web-scraping.png"
-                  ]
-                }
-                  teachers="Applying math and stats to understand what financial products are worth."
-                  name={"Financial Engineering"}
+            <div className="space-x-6 flex">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxRC7RDKSa-dcPKMs0acPjmDk2Mastl6UnUKEBRxJnInd8qw/viewform?usp=sf_link" rel="noopener noreferrer nofollow" target={"_blank"}>
+                <button className="bg-white transition-opacity hover:opacity-50 rounded-full px-8 py-3">
+                  Join
+                </button>
+              </a>
+            </div>
+            {/* <div className="my-2 px-3 h-8 w-full relative flex space-x-6">
+              <a href={"https://www.instagram.com/mcgill_qr/"} target="_blank" rel="noopener noreferrer nofollow">
+                <FontAwesomeIcon icon={faInstagram} height={35} color="white" />
+              </a>
+              <a href={"https://www.linkedin.com/company/mcgillqr/"} target="_blank" rel="noopener noreferrer nofollow">
+                <FontAwesomeIcon icon={faLinkedin} height={35} color="white" />
+              </a>
+              <a href={"mailto:info@mcgillqr.com"} target="_blank" rel="noopener noreferrer nofollow">
+                <FontAwesomeIcon icon={faEnvelope} height={35} color="white" />
+              </a>
+            </div> */}
+          </div>
+          <div className="flex-1 flex mt-16 relative justify-center max-h-[1000px] items-center">
+            <div className="lg:absolute lg:scale-150 z-10">
+              <Image
+                src={"/sbcsclub/mcgill_qr.png"}
+                quality={100}
+                objectFit="contain"
+                width={450}
+                height={450}
+                alt={`logo`} // Add the alt attribute here
               />
             </div>
-          </section>
-          {/* <section id="hackathon" className="flex justify-center w-full min-h-screen">
+          </div>
+        </section>
+
+        <section id="about" className="min-h-[500px] pt-20 mb-[100px] items-center flex flex-col-reverse lg:flex-row max-w-7xl px-6 md:px-3">
+
+          <div className="flex-1 relative flex justify-center items-center px-10">
+            {/* Photo Section */}
+            <Image
+              src="/trottier.jpg"
+              alt="Descriptive alt text"
+              width={2000 / 3}  // Original width of the image
+              height={1330 / 3} // Original height of the image
+              layout="intrinsic"  // Ensures the image scales responsively and keeps its aspect ratio
+              className="object-contain"
+            />
+          </div>
+
+          <div className="flex-1 my-[100px] lg:my-0 space-y-6">
+            <h1
+              style={{ lineHeight: 1.1 }}
+              className="md:text-7xl text-5xl font-medium text-white">
+              <span className={`${HomeStyles.overviewHeader}`}></span>About Us
+            </h1>
+            <p className="md:text-xl text-lg text-white font-light text-opacity-60">
+              <span className={HomeStyles.proHighlight}>McGill Quantitative Research</span> is a student-led initiative comprised of McGill’s brightest statistics, math, and computer science students.
+            </p>
+
+            <p className="md:text-xl text-lg text-white font-light text-opacity-60">
+              Through mentorship and hands-on projects, we prepare members for successful careers in&nbsp;
+              <span className={HomeStyles.proHighlight}>quantitative finance</span>, bridging the gap between academic theory and&nbsp;
+              <span className={HomeStyles.proHighlight}>real-world application</span>.
+            </p>
+
+            <p className="md:text-xl text-lg text-white font-light text-opacity-60">
+              Our members collaborate on quant research projects, publish their findings, and connect with industry professionals. We are building a community where students advance their skills in&nbsp;
+              <span className={HomeStyles.proHighlight}>algorithmic programming</span>,&nbsp;
+              <span className={HomeStyles.proHighlight}>data science</span>,&nbsp;
+              <span className={HomeStyles.proHighlight}>financial engineering</span>, and&nbsp;
+              <span className={HomeStyles.proHighlight}>risk management</span>.
+            </p>
+          </div>
+        </section>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <section id="workshops" className="min-h-screen mt-6 flex-col space-y-3 flex max-w-7xl relative justify-center items-center" >
+          <div className={`${HomeStyles.gradientBubbleTwo}`}></div>
+          <h1
+            style={{ lineHeight: 1.1 }}
+            className="md:text-7xl text-5xl font-medium text-white">
+            <span className={`${HomeStyles.proHighlight}`}></span>Research Areas
+          </h1>
+          <h2
+            className="md:text-xl px-6 md:px-0 text-lg text-white font-light text-center text-opacity-60">
+            Our goal is to pursue exploratory projects and showcase our findings in these areas
+          </h2>
+          <div className="content-start flex w-full flex-wrap justify-center items-center">
+            <Workshop
+              setWorkshop={setWorkshop}
+              workshop={workshop}
+              description=""
+              images={
+                [
+                  // "/sbcsclub/workshops/rust.png"
+                ]
+              }
+              teachers="Teaching computers to trade better than humans."
+              name={"Algorithmic Trading"}
+            />
+            <Workshop
+              setWorkshop={setWorkshop}
+              workshop={workshop}
+              description=""
+              images={
+                [
+                  // "/sbcsclub/workshops/roblox.png"
+                ]
+              }
+              teachers="Quantifying and managing the risk associated with investing."
+              name={"Risk Management"}
+            />
+          </div>
+          <div className="content-start flex w-full flex-wrap justify-center items-center">
+            <Workshop
+              setWorkshop={setWorkshop}
+              workshop={workshop}
+              description=""
+              images={
+                [
+                  // "/sbcsclub/workshops/cloud-services.png"
+                ]
+              }
+              teachers="Using data to drive investment decisions."
+              name={"Data Science"}
+            />
+            <Workshop
+              setWorkshop={setWorkshop}
+              workshop={workshop}
+              description=""
+              images={
+                [
+                  // "/sbcsclub/workshops/web-scraping.png"
+                ]
+              }
+              teachers="Applying math and stats to understand what financial products are worth."
+              name={"Financial Engineering"}
+            />
+          </div>
+        </section>
+        {/* <section id="hackathon" className="flex justify-center w-full min-h-screen">
             <div className="flex-1 justify-center space-y-3 text-white flex items-center flex-col">
                 <h1 className="text-7xl font-bold">Hackathon</h1>
             </div>
@@ -175,8 +192,24 @@ const Home: NextPage = () => {
               <Image src={"/hackathon.jpg"} objectFit="cover" layout="fill" />
             </div>
           </section> */}
+        <section id="workshops" className="min-h-[100px] my-0 flex-col space-y-3 flex max-w-7xl relative justify-center items-center">
+          <div className="my-0 px-3 h-auto w-full relative flex space-x-6">
+            <a href={"https://www.instagram.com/mcgill_qr/"} target="_blank" rel="noopener noreferrer nofollow">
+              <FontAwesomeIcon icon={faInstagram} height={35} color="white" />
+            </a>
+            <a href={"https://www.linkedin.com/company/mcgillqr/"} target="_blank" rel="noopener noreferrer nofollow">
+              <FontAwesomeIcon icon={faLinkedin} height={35} color="white" />
+            </a>
+            <a href={"mailto:info@mcgillqr.com"} target="_blank" rel="noopener noreferrer nofollow">
+              <FontAwesomeIcon icon={faEnvelope} height={35} color="white" />
+            </a>
+          </div>
+        </section>
+
       </main>
-      <Footer />
+      <Footer
+      >
+      </Footer>
     </>
   );
 };
