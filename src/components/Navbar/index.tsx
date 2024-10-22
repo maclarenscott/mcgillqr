@@ -1,5 +1,7 @@
 import Image from "next/image";
 import React, { useCallback, useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const Navbar = () => {
     const [ minimized, setMinimized ] = useState(false);
@@ -32,6 +34,11 @@ const Navbar = () => {
                     <Image src={"/sbcsclub/mcgill_qr.png"} layout="fill" objectFit="contain" />
                 </div> */}
                 <ul className="text-white flex space-x-6 p-2">
+                {/* <li>
+                    <a href="https://www.instagram.com/sbcsclub/" target="_blank" rel="noopener noreferrer nofollow">
+                        <FontAwesomeIcon icon={faInstagram} height={35} color="white" />
+                    </a>
+                </li> */}
                     <li>
                         <a href="#home">
                             Home
@@ -43,7 +50,7 @@ const Navbar = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="/join_us">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxRC7RDKSa-dcPKMs0acPjmDk2Mastl6UnUKEBRxJnInd8qw/viewform?usp=sf_link">
                             Join Us
                         </a>
                     </li>
