@@ -73,7 +73,7 @@ const Home: NextPage = () => {
           <section id="overview" className="min-h-[500px] mb-[100px] items-center flex flex-col-reverse lg:flex-row max-w-7xl px-6 md:px-3">
           <div className="flex-1 relative flex justify-center items-center">
             {/* Photo Section */}
-            <img 
+            <Image 
               src="../../../trottier.jpg" 
               alt="Descriptive alt text" 
               className="w-full h-full object-cover mx-5 lg:mr-10 lg:mx-0"
@@ -96,7 +96,7 @@ const Home: NextPage = () => {
               </p>
 
               <p className="md:text-xl text-lg text-white font-light text-opacity-60">
-                Our members collaborate on quant research projects, publish their findings, and connect with industry professionals. We're building a community where students advance their skills in&nbsp;
+                Our members collaborate on quant research projects, publish their findings, and connect with industry professionals. We are building a community where students advance their skills in&nbsp;
                 <span className={HomeStyles.proHighlight}>algorithmic programming</span>,&nbsp;
                 <span className={HomeStyles.proHighlight}>data science</span>,&nbsp;
                 <span className={HomeStyles.proHighlight}>financial engineering</span>, and&nbsp;
