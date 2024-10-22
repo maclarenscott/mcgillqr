@@ -18,6 +18,9 @@ jobs:
         username: ${{ secrets.SERVER_USER }}
         password: ${{ secrets.SERVER_PASSWORD }}
         script: |
+          # Exit if any command fails
+          set -e
+          
           # Stop the process using port 3000
           fuser -k 3000/tcp || true
           
