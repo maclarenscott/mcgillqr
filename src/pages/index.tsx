@@ -74,7 +74,7 @@ const Home: NextPage = () => {
           <div className="flex-1 relative flex justify-center items-center">
             {/* Photo Section */}
             <img 
-              src="../../sbcsclub/swim_team.JPG" 
+              src="../../../trottier.jpg" 
               alt="Descriptive alt text" 
               className="w-full h-full object-cover mx-5 lg:mr-10 lg:mx-0"
             />
@@ -96,7 +96,7 @@ const Home: NextPage = () => {
               </p>
 
               <p className="md:text-xl text-lg text-white font-light text-opacity-60">
-                Our members collaborate on quant research projects, publish their findings, and connect with industry professionals. Through a rigorous selection process, we foster a supportive community where students advance their skills in&nbsp;
+                Our members collaborate on quant research projects, publish their findings, and connect with industry professionals. We're building a community where students advance their skills in&nbsp;
                 <span className={HomeStyles.proHighlight}>algorithmic programming</span>,&nbsp;
                 <span className={HomeStyles.proHighlight}>data science</span>,&nbsp;
                 <span className={HomeStyles.proHighlight}>financial engineering</span>, and&nbsp;
@@ -109,51 +109,59 @@ const Home: NextPage = () => {
             <h1
               style={{ lineHeight: 1.1 }}
               className="md:text-7xl text-5xl font-medium text-white">
-                <span className={`${HomeStyles.proHighlight}`}></span>Our Sectors
+                <span className={`${HomeStyles.proHighlight}`}></span>Research Areas
             </h1>
             <h2
               className="md:text-xl px-6 md:px-0 text-lg text-white font-light text-center text-opacity-60">
-                Explore key areas of quantitative finance and research, providing practical skills and knowledge to excel in each field.
+                Our goal is to pursue exploratory projects and showcase our findings in these areas
             </h2>
             <div className="min-h-screen content-start flex w-full flex-wrap justify-center items-center">
               <Workshop 
                   setWorkshop={setWorkshop}
                   workshop={workshop}
-                  description="Algorithmic programming involves creating and optimizing algorithms to solve computational problems efficiently. It is widely used in fields like finance, computer science, and technology for processing large datasets and automating tasks."
-                  images={[
-                    "/sbcsclub/workshops/rust.png"
-                  ]}
-                  teachers="Onur Gul"
-                  name={"Algorithmic Programming"}
+                  description=""
+                  images={
+                    [
+                    // "/sbcsclub/workshops/rust.png"
+                  ]
+                }
+                  teachers="Teaching computers to trade better than humans."
+                  name={"Algorithmic Trading"}
               />
                <Workshop 
                   setWorkshop={setWorkshop}
                   workshop={workshop}
-                  description="Risk management focuses on identifying, assessing, and mitigating financial risks. It involves techniques for evaluating potential risks and strategies to minimize their impact on financial systems and investments."
-                  images={[
-                    "/sbcsclub/workshops/roblox.png"
-                  ]}
-                  teachers="TBD"
+                  description=""
+                  images={
+                    [
+                    // "/sbcsclub/workshops/roblox.png"
+                  ]
+                }
+                  teachers="Quantifying and managing the risk associated with investing."
                   name={"Risk Management"}
               />
                <Workshop 
                   setWorkshop={setWorkshop}
                   workshop={workshop}
-                  description="Data science involves analyzing and interpreting large datasets using statistical methods and machine learning. It helps extract insights and make data-driven decisions in various industries, including finance and technology."
-                  images={[
-                    "/sbcsclub/workshops/cloud-services.png"
-                  ]}
-                  teachers="Maclaren Scott"
+                  description=""
+                  images={
+                    [
+                    // "/sbcsclub/workshops/cloud-services.png"
+                  ]
+                }
+                  teachers="Using data to drive investment decisions."
                   name={"Data Science"}
               />
               <Workshop 
                   setWorkshop={setWorkshop}
                   workshop={workshop}
-                  description="Financial engineering applies mathematical models and computational tools to design financial products and manage financial risks. It includes areas like derivatives, pricing models, and the structuring of financial solutions."
-                  images={[
-                    "/sbcsclub/workshops/web-scraping.png"
-                  ]}
-                  teachers="TBD"
+                  description=""
+                  images={
+                    [
+                    // "/sbcsclub/workshops/web-scraping.png"
+                  ]
+                }
+                  teachers="Applying math and stats to understand what financial products are worth."
                   name={"Financial Engineering"}
               />
             </div>
