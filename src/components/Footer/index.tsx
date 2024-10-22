@@ -13,7 +13,7 @@ const PageFooter : React.FC<React.HTMLProps<HTMLDivElement>> = ({ className, ...
             { ...props}
         >
             <div className={`${FooterStyles.footerGradientBubble} z-20`}></div>
-            <p className="text-white !mt-8 text-center">©{currentYear} McGill Quantitative Research Club. All Rights Reserved.</p>
+            <p className="text-white !mt-8 text-center">©{currentYear} McGill Quantitative Research Club.</p>
         </footer>
     )
 }
