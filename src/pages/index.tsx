@@ -137,7 +137,7 @@ const Home: NextPage = () => {
               description=""
               images={
                 [
-                  // "/sbcsclub/workshops/rust.png"
+                  "/algo.jpeg"
                 ]
               }
               teachers="Teaching computers to trade better than humans."
@@ -149,7 +149,7 @@ const Home: NextPage = () => {
               description=""
               images={
                 [
-                  // "/sbcsclub/workshops/roblox.png"
+                  "/sharpe.png"
                 ]
               }
               teachers="Quantifying and managing the risk associated with investing."
@@ -163,7 +163,7 @@ const Home: NextPage = () => {
               description=""
               images={
                 [
-                  // "/sbcsclub/workshops/cloud-services.png"
+                  "/ds.png"
                 ]
               }
               teachers="Using data to drive investment decisions."
@@ -175,7 +175,7 @@ const Home: NextPage = () => {
               description=""
               images={
                 [
-                  // "/sbcsclub/workshops/web-scraping.png"
+                  "/fe.png"
                 ]
               }
               teachers="Applying math and stats to understand what financial products are worth."
