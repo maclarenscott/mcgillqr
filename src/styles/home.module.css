@@ -19,10 +19,10 @@
     width: 100%;
     height: 30%;
     filter: blur(92px);
-    transform: rotate(30deg) translateZ(0);
+    transform: rotate(25deg) translateZ(0);
     border-radius: 10%;
     max-height: 400px;
-    background: linear-gradient( 90deg, rgba(255, 205, 159, 0.5) 25%, rgba(119, 222, 255, 0.4) 50%, rgba(221, 14, 255, 0.15) 75% );
+    background: linear-gradient( 90deg, rgba(255, 0, 0, 0.5) 25%, rgba(241, 161, 161, 0.4) 50%, rgba(255, 0, 0, 0.15) 75% );
 }
 
 .gradientBubbleTwo {
@@ -36,13 +36,13 @@
     transform: rotate(-30deg) translateZ(0);
     border-radius: 10%;
     max-height: 400px;
-    background: linear-gradient(90deg, rgba(255, 205, 159, 0.5) 25%, rgba(119, 222, 255, 0.4) 50%, rgba(221, 14, 255, 0.15) 75% );
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.5) 25%, rgba(255, 167, 167, 0.4) 50%, rgba(255, 138, 138, 0.15) 75% );
 }
 
 .proHighlight {
     -webkit-text-fill-color: transparent; 
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, rgba(255, 205, 159, 0.5) 0%, rgba(119, 222, 255, 0.4) 46%, rgba(221, 14, 255, 0.15) 100%);
+    background-color: #d69d94;
+    background-image: linear-gradient(43deg, rgba(255, 0, 0, 0.5) 0%, rgba(220, 118, 118, 0.4) 46%, rgba(255, 12, 12, 0.15) 100%);
     background-clip: text;
 }
 

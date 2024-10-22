@@ -7,6 +7,7 @@ import Workshop from "../components/Workshop";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Navbar from "../components/Navbar";
 import MeetingDate from "../components/MeetingDate";
 import Footer from "../components/Footer";
@@ -38,22 +39,20 @@ const Home: NextPage = () => {
                     Providing students with practical quant research experience and meaningful industry exposure.
                 </h2>
                 <div className="space-x-6 flex">
-                  <a href="https://forms.gle/k8k71EUXmiMS1eQG6" rel="noopener noreferrer nofollow" target={"_blank"}>
-                    <button className="bg-white transition-opacity hover:opacity-50 rounded-full p-3">
-                      Workshop Sign Up
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxRC7RDKSa-dcPKMs0acPjmDk2Mastl6UnUKEBRxJnInd8qw/viewform?usp=sf_link" rel="noopener noreferrer nofollow" target={"_blank"}>
+                    <button className="bg-white transition-opacity hover:opacity-50 rounded-full px-8 py-3">
+                      Join Us
                     </button>
                   </a>
-                 <a href="#workshops">
-                    <button className="transition-opacity hover:opacity-50 text-white p-3">
-                      View Workshops
-                    </button>
-                 </a>
                 </div>
                 <div className="my-2 px-3 h-8 w-full relative flex space-x-6">
-                  <a href={"https://www.instagram.com/sbcsclub/"} target="_blank" rel="noopener noreferrer nofollow">
+                  <a href={"https://www.instagram.com/mcgill_qr/"} target="_blank" rel="noopener noreferrer nofollow">
                     <FontAwesomeIcon icon={faInstagram} height={35} color="white" />
                   </a>
-                  <a href={"mailto:csclub@sbschools.org"} target="_blank" rel="noopener noreferrer nofollow">
+                  <a href={"https://www.linkedin.com/company/mcgillqr/"} target="_blank" rel="noopener noreferrer nofollow">
+                    <FontAwesomeIcon icon={faLinkedin} height={35} color="white" />
+                  </a>
+                  <a href={"mailto:info@mcgillqr.com"} target="_blank" rel="noopener noreferrer nofollow">
                     <FontAwesomeIcon icon={faEnvelope} height={35} color="white" />
                   </a>
                 </div>
@@ -72,53 +71,37 @@ const Home: NextPage = () => {
               </div>
           </section>
           <section id="overview" className="min-h-[500px] mb-[100px] items-center flex flex-col-reverse lg:flex-row max-w-7xl px-6 md:px-3">
-            <div className="flex-1 relative flex justify-center items-center space-x-0 md:space-x-6">
-              <div className={`${HomeStyles.gradientBubbleOne}`}></div>
-              <div className="flex-col flex space-y-3 w-min">
-                <h1 className="text-white font-medium text-center text-lg">1st Semester</h1>
-                <MeetingDate date="October 11th, 2023" />
-                <MeetingDate date="October 25th, 2023" />
-                <MeetingDate date="October 31st, 2023" />
-                <MeetingDate date="November 28th, 2023" />
-                <MeetingDate date="December 12th, 2023" />
-                <MeetingDate date="January 2nd, 2024" />
-              </div>
-              <div className="flex-col flex !ml-3 md:ml-0 space-y-3 w-min">
-                <h1 className="text-white font-medium text-center text-lg">2nd Semester</h1>
-                <MeetingDate date="January 16th, 2024" />
-                <MeetingDate date="February 13th, 2024" />
-                <MeetingDate date="February 20th, 2024" />
-                <MeetingDate date="March 12th, 2024" />
-                <MeetingDate date="April 3rd, 2024" />
-                <MeetingDate date="April 30th, 2024" />
-                <MeetingDate date="May 14th, 2024" />
-              </div>
-            </div>
+          <div className="flex-1 relative flex justify-center items-center">
+            {/* Photo Section */}
+            <img 
+              src="../../sbcsclub/swim_team.JPG" 
+              alt="Descriptive alt text" 
+              className="w-full h-full object-cover mx-5 lg:mr-10 lg:mx-0"
+            />
+          </div>
             <div className="flex-1 my-[100px] lg:my-0 space-y-6">
               <h1
                 style={{ lineHeight: 1.1 }}
                 className="md:text-7xl text-5xl font-medium text-white">
-                 <span className={`${HomeStyles.overviewHeader}`}>Club</span> Overview
+                 <span className={`${HomeStyles.overviewHeader}`}></span>About Us
               </h1>
-              <p
-                className="md:text-xl text-lg text-white font-light text-opacity-60">
-                  Our goal is to teach students all about computer science and we require&nbsp; 
-                  <span className={HomeStyles.proHighlight}>Zero</span> experience. 
-                  Club meetings are held Bimonthly on <span className={HomeStyles.proHighlight}>Tuesdays</span>. 
+              <p className="md:text-xl text-lg text-white font-light text-opacity-60">
+                <span className={HomeStyles.proHighlight}>McGill Quantitative Research</span> is a student-led initiative comprised of McGill’s brightest statistics, math, and computer science students.
               </p>
-              <p
-                className="md:text-xl text-lg text-white font-light text-opacity-60">
-                  To gain club credit you must at least&nbsp;
-                  <span className={HomeStyles.proHighlight}>50%</span>&nbsp;
-                  of the meetings, pay to participate&nbsp; 
-                { /*(<span className={HomeStyles.proHighlight}>$25</span>) */}
-                  on Community Pass, and submit club dues 
-                  (<span className={HomeStyles.proHighlight}>$10</span>).
+
+              <p className="md:text-xl text-lg text-white font-light text-opacity-60">
+                Through mentorship and hands-on projects, we prepare members for successful careers in&nbsp;
+                <span className={HomeStyles.proHighlight}>quantitative finance</span>, bridging the gap between academic theory and&nbsp;
+                <span className={HomeStyles.proHighlight}>real-world application</span>.
               </p>
-              <p
-                className="md:text-xl text-lg text-white font-light text-opacity-60">
-                  Our wonderful advisors are Mr. Schiff, Ms. Robles, and Mr. Trainor.
-              </p>
+
+              <p className="md:text-xl text-lg text-white font-light text-opacity-60">
+                Our members collaborate on quant research projects, publish their findings, and connect with industry professionals. Through a rigorous selection process, we foster a supportive community where students advance their skills in&nbsp;
+                <span className={HomeStyles.proHighlight}>algorithmic programming</span>,&nbsp;
+                <span className={HomeStyles.proHighlight}>data science</span>,&nbsp;
+                <span className={HomeStyles.proHighlight}>financial engineering</span>, and&nbsp;
+                <span className={HomeStyles.proHighlight}>risk management</span>.
+            </p>
             </div>
           </section>
           <section id="workshops" className="min-h-screen my-6 flex-col space-y-3 flex max-w-7xl relative justify-center items-center" >
@@ -126,51 +109,51 @@ const Home: NextPage = () => {
             <h1
               style={{ lineHeight: 1.1 }}
               className="md:text-7xl text-5xl font-medium text-white">
-                <span className={`${HomeStyles.proHighlight}`}>Pro</span> Workshops
+                <span className={`${HomeStyles.proHighlight}`}></span>Our Sectors
             </h1>
             <h2
               className="md:text-xl px-6 md:px-0 text-lg text-white font-light text-center text-opacity-60">
-                Explore a Variety of Useful Workshops and Plan For Your Next Endeavor.
+                Explore key areas of quantitative finance and research, providing practical skills and knowledge to excel in each field.
             </h2>
             <div className="min-h-screen content-start flex w-full flex-wrap justify-center items-center">
               <Workshop 
                   setWorkshop={setWorkshop}
                   workshop={workshop}
-                  description="Rust is a blazingly fast and memory-efficient general-purpose programming language. We will be teaching the basics of rust and working through many of the features needed to use it for any purpose, such as ownership, structures, pattern matching, and concurrency. Prior knowledge of basic programming concepts is highly recommended."
+                  description="Algorithmic programming involves creating and optimizing algorithms to solve computational problems efficiently. It is widely used in fields like finance, computer science, and technology for processing large datasets and automating tasks."
                   images={[
                     "/sbcsclub/workshops/rust.png"
                   ]}
-                  teachers="Shahrian Masud, Mohammad Sadiq, Sreeram Vuppala"
+                  teachers="Onur Gul"
                   name={"Algorithmic Programming"}
               />
                <Workshop 
                   setWorkshop={setWorkshop}
                   workshop={workshop}
-                  description="Learn the fundamentals of computer science using Lua along with the Roblox Game Engine! By the end of this workshop, members will be able to create a 3D story-based game in Roblox with generated mobs, while learning basic programming."
+                  description="Risk management focuses on identifying, assessing, and mitigating financial risks. It involves techniques for evaluating potential risks and strategies to minimize their impact on financial systems and investments."
                   images={[
                     "/sbcsclub/workshops/roblox.png"
                   ]}
-                  teachers="Anika Thakur, Esha Vigneswaran, Tejas Raghuram"
+                  teachers="TBD"
                   name={"Risk Management"}
               />
                <Workshop 
                   setWorkshop={setWorkshop}
                   workshop={workshop}
-                  description="Cloud services are essential for deploying, scaling, developing applications in todays time. In this workshop students will learn how to use services provided both by Firebase (GCP) and Oracle. Services include Cloud functions (serverless functions), Firestore (real-time database), Firebase authentication, and Oracle virtual machines, and more. Basic understanding of at least one programming language advised, preferebly JavaScript.  "
+                  description="Data science involves analyzing and interpreting large datasets using statistical methods and machine learning. It helps extract insights and make data-driven decisions in various industries, including finance and technology."
                   images={[
                     "/sbcsclub/workshops/cloud-services.png"
                   ]}
-                  teachers="Mahit Mehta, Ali Azam, Diya Shah"
+                  teachers="Maclaren Scott"
                   name={"Data Science"}
               />
               <Workshop 
                   setWorkshop={setWorkshop}
                   workshop={workshop}
-                  description="We will teach the basics of Web Scraping. We will go over scraping websites for basic tags like <p>, <h>, etc. By the end of the workshop, people will know how to scrape basics from any site and automate a few basic tasks"
+                  description="Financial engineering applies mathematical models and computational tools to design financial products and manage financial risks. It includes areas like derivatives, pricing models, and the structuring of financial solutions."
                   images={[
                     "/sbcsclub/workshops/web-scraping.png"
                   ]}
-                  teachers="Vivaan Shah, Abhik Mojumdar, Armaan Sarkhel"
+                  teachers="TBD"
                   name={"Financial Engineering"}
               />
             </div>
