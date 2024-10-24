@@ -59,13 +59,16 @@ const Home: NextPage = () => {
           </div>
           <div className="flex-1 flex mt-16 relative justify-center max-h-[1000px] items-center">
             <div className="lg:absolute lg:scale-150 z-10">
-              <Image
-                src={"/sbcsclub/mcgill_qr.png"}
-                quality={100}
-                objectFit="contain"
-                width={450}
-                height={450}
-                alt={`logo`} // Add the alt attribute here
+            <video 
+                src={"/mcgill_qr_vid_transparent.webm"} 
+                width={450} 
+                height={450} 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="object-contain"
+                // thank you matty
               />
             </div>
           </div>
