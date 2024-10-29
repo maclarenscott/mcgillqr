@@ -97,13 +97,12 @@ const Home: NextPage = () => {
 
             <p className="md:text-xl text-lg text-white font-light text-opacity-60">
               Through mentorship and hands-on projects, we prepare members for successful careers in&nbsp;
-              <span className={HomeStyles.proHighlight}>quantitative finance</span>, bridging the gap between academic theory and&nbsp;
-              <span className={HomeStyles.proHighlight}>real-world application</span>.
+              <span className={HomeStyles.proHighlight}>quantitative finance</span>, bridging the gap between academic theory and real-world application&nbsp;
             </p>
 
             <p className="md:text-xl text-lg text-white font-light text-opacity-60">
               Our members collaborate on quant research projects, publish their findings, and connect with industry professionals. We are building a community where students advance their skills in&nbsp;
-              <span className={HomeStyles.proHighlight}>algorithmic programming</span>,&nbsp;
+              <span className={HomeStyles.proHighlight}>algorithmic trading</span>,&nbsp;
               <span className={HomeStyles.proHighlight}>data science</span>,&nbsp;
               <span className={HomeStyles.proHighlight}>financial engineering</span>, and&nbsp;
               <span className={HomeStyles.proHighlight}>risk management</span>.
