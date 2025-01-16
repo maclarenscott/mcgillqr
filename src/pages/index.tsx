@@ -71,7 +71,7 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        <section id="about" className="min-h-[500px] pt-20 mb-[100px] items-center flex flex-col-reverse lg:flex-row max-w-7xl px-6 md:px-3">
+        <section id="about" className="min-h-[500px] pt-8 mb-[100px] items-center flex flex-col-reverse lg:flex-row max-w-7xl px-6 md:px-3  ">
 
           <div className="flex-1 relative flex justify-center items-center px-10">
             {/* Photo Section */}
@@ -103,21 +103,13 @@ const Home: NextPage = () => {
             <p className="md:text-xl text-lg text-white font-light text-opacity-60">
               Our members collaborate on quant research projects, publish their findings, and connect with industry professionals. We are building a community where students advance their skills in&nbsp;
               <span className={HomeStyles.proHighlight}>algorithmic trading</span>,&nbsp;
-              <span className={HomeStyles.proHighlight}>data science</span>,&nbsp;
-              <span className={HomeStyles.proHighlight}>financial engineering</span>, and&nbsp;
-              <span className={HomeStyles.proHighlight}>risk management</span>.
+              <span className={HomeStyles.proHighlight}>data science</span>, and &nbsp;
+              <span className={HomeStyles.proHighlight}>risk management</span>.&nbsp;
+              {/* <span className={HomeStyles.proHighlight}>risk management</span>. */}
             </p>
           </div>
         </section>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+
         <section id="workshops" className="min-h-screen mt-6 flex-col space-y-3 flex max-w-7xl relative justify-center items-center" >
           <div className={`${HomeStyles.gradientBubbleTwo}`}></div>
           <h1
@@ -129,7 +121,8 @@ const Home: NextPage = () => {
             className="md:text-xl px-6 md:px-0 text-lg text-white font-light text-center text-opacity-60">
             Our goal is to pursue exploratory projects and showcase our findings in these areas
           </h2>
-          <div className="content-start flex w-full flex-wrap justify-center items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 w-full items-start justify-items-center">
+
             <Workshop
               setWorkshop={setWorkshop}
               workshop={workshop}
@@ -151,12 +144,11 @@ const Home: NextPage = () => {
                   "/sharpe.png"
                 ]
               }
-              teachers="Quantifying and managing the risk associated with investing."
+              teachers="Quantifying and managing the risk associated with decision making."
               name={"Risk Management"}
             />
-          </div>
-          <div className="content-start flex w-full flex-wrap justify-center items-center">
-            <Workshop
+          
+          <Workshop
               setWorkshop={setWorkshop}
               workshop={workshop}
               description=""
@@ -165,32 +157,16 @@ const Home: NextPage = () => {
                   "/ds.png"
                 ]
               }
-              teachers="Using data to drive investment decisions."
+              teachers="Using data-driven models to solve real world problems."
               name={"Data Science"}
             />
-            <Workshop
-              setWorkshop={setWorkshop}
-              workshop={workshop}
-              description=""
-              images={
-                [
-                  "/fe.png"
-                ]
-              }
-              teachers="Applying math and stats to understand what financial products are worth."
-              name={"Financial Engineering"}
-            />
+          {/* <div className="content-start flex w-full flex-wrap justify-center items-center">
+           
+       
+          </div> */}
           </div>
         </section>
-        {/* <section id="hackathon" className="flex justify-center w-full min-h-screen">
-            <div className="flex-1 justify-center space-y-3 text-white flex items-center flex-col">
-                <h1 className="text-7xl font-bold">Hackathon</h1>
-            </div>
-            <div 
-              className={`relative ${HomeStyles.gradientOverlay}`}>
-              <Image src={"/hackathon.jpg"} objectFit="cover" layout="fill" />
-            </div>
-          </section> */}
+
         <section id="workshops" className="min-h-[100px] my-0 flex-col space-y-3 flex max-w-7xl relative justify-center items-center">
           <div className="my-0 px-3 h-auto w-full relative flex space-x-6">
             <a href={"https://www.instagram.com/mcgill_qr/"} target="_blank" rel="noopener noreferrer nofollow">
