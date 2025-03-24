@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+// import "../styles/Member.css";
 import type { AppType } from "next/app";
 import { trpc } from "../utils/trpc";
 import { createEmotionSsrAdvancedApproach } from "tss-react/next";
