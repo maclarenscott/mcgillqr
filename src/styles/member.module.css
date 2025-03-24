@@ -1,0 +1,151 @@
+/* src/styles/Member.module.css */
+
+/* 
+   The parent container around each image 
+   (the circle + the overlay).
+*/
+.memberWrapper {
+  position: relative;         /* needed for absolutely-positioned overlay */
+  width: 160px;               /* controlling the circle size; adjust as needed */
+  height: 160px;
+  border: 4px solid #fff;     /* border ring color around the circle */
+  border-radius: 9999px;      /* make it fully circular */
+  overflow: hidden;           /* hide the overlay edges outside the circle */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;            /* show pointer on hover */
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);  /* faint ring shadow */
+}
+
+/*
+   On hover, we can make the circle slightly larger or 
+   add a glow ring if we want. 
+*/
+.memberWrapper:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 8px 4px rgba(0,0,0,0.15);
+}
+
+/* 
+   The actual image inside the circle. 
+   It's forced to fill the parent's size, 
+   so w/h = 160px, object-fit cover to preserve ratio, 
+   and keep it circular with border-radius.
+*/
+.memberImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 9999px;
+}
+
+/*
+   The overlay that appears on hover. 
+   We'll position it absolutely on top of the .memberWrapper. 
+   It's fully covering the circle, but we set opacity:0 initially. 
+*/
+.overlay {
+  position: absolute;
+  top: 0; left: 0; 
+  right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5);  /* semi-transparent black */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* 
+   Show the overlay ONLY when the user hovers 
+   exactly on the .memberWrapper. 
+*/
+.memberWrapper:hover .overlay {
+  opacity: 1;
+}
+
+/*
+   Inner container for the overlay text, 
+   so we can style it more easily. 
+*/
+.overlayInner {
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+/* 
+   The person's name in the overlay. 
+   We can style it bold, bigger, etc. 
+*/
+.memberName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.5px;
+}
+
+/*
+   The position text (VP Finance, President, etc.). 
+   Slightly smaller than the name. 
+*/
+.memberPosition {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+/*
+   The field (like "U2 Mathematics/Computer Science"). 
+   We can italicize it for style. 
+*/
+.memberField {
+  font-size: 0.9rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* 
+   Example media queries if you want the circle smaller on mobile. 
+*/
+@media (max-width: 480px) {
+  .memberWrapper {
+    width: 120px;
+    height: 120px;
+  }
+  .memberImage {
+    width: 100%;
+    height: 100%;
+  }
+  .memberName {
+    font-size: 1rem;
+  }
+  .memberPosition {
+    font-size: 0.9rem;
+  }
+  .memberField {
+    font-size: 0.8rem;
+  }
+}
+
+/*
+   Another media query for mid-size devices. 
+   You can stack these or refine them. 
+*/
+@media (max-width: 768px) {
+  .memberWrapper {
+    margin: 0 auto; /* center if we want single-column on smaller screens */
+  }
+}
+
+/*
+   You could add fancier transitions, 
+   like fade-in from the bottom. For example:
+   .overlay {
+     transform: translateY(20px);
+   }
+   .memberWrapper:hover .overlay {
+     transform: translateY(0);
+     opacity: 1;
+   }
+   Just an example of more advanced animations. 
+*/
