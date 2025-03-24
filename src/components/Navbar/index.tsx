@@ -1,63 +1,64 @@
-import Image from "next/image";
+// FILE: components/Navbar.tsx
 import React, { useCallback, useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
+import styles from "../../styles/navbar.module.css"; // Import the CSS module
 
 const Navbar = () => {
-    const [ minimized, setMinimized ] = useState(false);
+  const [minimized, setMinimized] = useState(false);
 
-    const handleScroll = useCallback(() => {
-        if (window.scrollY > 100) {
-            setMinimized(true);
-        } else {
-            setMinimized(false);
-        }
-    }, []);
+  const handleScroll = useCallback(() => {
+    if (window.scrollY > 100) {
+      setMinimized(true);
+    } else {
+      setMinimized(false);
+    }
+  }, []);
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [ handleScroll ]);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
-    return (
-        <div 
-            style={{
-                background: minimized ? "rgba(0,0,0, 0.5)" : "transparent",
-                backdropFilter: minimized ? "blur(5px)" : undefined,
-                WebkitBackdropFilter: minimized ? "blur(5px)" : undefined
-            }}
-            className="fixed px-3 py-2 w-full z-50 transition-all">
-            <nav className="flex justify-center items-center">
-                {/* <div style={{ 
-                    height: minimized ? 50 :  100, width: minimized ? 50 :  100 
-                }} className="relative transition-all duration-300">
-                    <Image src={"/sbcsclub/mcgill_qr.png"} layout="fill" objectFit="contain" />
-                </div> */}
-                <ul className="text-white flex space-x-6 p-2">
-                {/* <li>
-                    <a href="https://www.instagram.com/sbcsclub/" target="_blank" rel="noopener noreferrer nofollow">
-                        <FontAwesomeIcon icon={faInstagram} height={35} color="white" />
-                    </a>
-                </li> */}
-                    <li>
-                        <a href="#home">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#about">
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxRC7RDKSa-dcPKMs0acPjmDk2Mastl6UnUKEBRxJnInd8qw/viewform?usp=sf_link">
-                            Join Us
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    )
-}
+  return (
+    <div
+      className={`${styles.navbar} ${minimized ? styles.minimized : ""}`}
+    >
+      <nav>
+        <ul className={styles.ul}>
+          <li>
+            <Link legacyBehavior href="/#home">
+              <a className={styles["nav-link"]}>Home</a>
+            </Link>
+          </li>
+          <li>
+            <Link legacyBehavior href="/#about">
+              <a className={styles["nav-link"]}>About</a>
+            </Link>
+          </li>
+          <li>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdxRC7RDKSa-dcPKMs0acPjmDk2Mastl6UnUKEBRxJnInd8qw/viewform?usp=sf_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles["nav-link"]}
+            >
+              Join Us
+            </a>
+          </li>
+          <li>
+            <Link legacyBehavior href="/team">
+              <a className={styles["nav-link"]}>Team</a>
+            </Link>
+          </li>
+          <li>
+            <Link legacyBehavior href="/projects">
+              <a className={styles["nav-link"]}>Projects</a>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
+};
 
-export default Navbar; 
+export default Navbar;

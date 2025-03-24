@@ -1,0 +1,104 @@
+/* FILE: styles/navbar.css */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    z-index: 50;
+    transition: all 0.3s ease;
+    background: transparent;
+    backdrop-filter: blur(5px);
+  }
+  
+  .navbar.minimized {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Increase spacing between links */
+    padding: 0.5rem 0;
+    list-style: none;
+  }
+  
+  .navbar li {
+    list-style: none;
+  }
+  
+  .nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-link:hover {
+    color: #fff;
+  }
+  
+  .nav-link {
+    position: relative; /* Ensure the pseudo element is positioned relative to .nav-link */
+  }
+  
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    top: 100%;            /* Position it right below the content */
+    left: 0;
+    width: 100%;
+    height: 4px;
+    margin-top: 4px;      /* Adjust this value to control the gap */
+    background-color: red;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.2s ease;
+  }
+  
+  .nav-link:hover::after {
+    transform: scaleY(1);
+  }
+  
+  /* navbar.module.css */
+
+/* .navbar {
+  /* existing styles for your navbar container 
+} */
+
+/* .ul {
+  /* existing styles for your nav <ul> 
+} */
+
+.nav-link {
+  /* existing styles for your nav links, e.g.: */
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+  font-size: 1rem; /* desktop default, can adjust if needed */
+}
+
+.nav-link:hover {
+  /* hover effect, if any */
+  color: #ccc;
+}
+
+/* 
+  Add or update this media query for smaller screens (up to 640px). 
+  Adjust the font-size if you need it even smaller. 
+*/
+@media (max-width: 640px) {
+  .nav-link {
+    font-size: 0.7rem; /* significantly smaller for mobile */
+  }
+}
+
+/* 
+  If you have styles for minimized navbar, keep them.
+  Just ensure the font-size here doesn't conflict with the media query
+*/
+/* .minimized {
+  /* your minimized state styles 
+}
+ */
