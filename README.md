@@ -10,3 +10,4 @@ Current Repo for McGill Quantitative Research Club Webpage.
 # Deploy
 
 Run deployment github action
+deployment via gh actions is depracated
