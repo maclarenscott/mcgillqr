@@ -9,4 +9,4 @@ Current Repo for McGill Quantitative Research Club Webpage.
 
 # Deploy
 
-Run deployment github action
+auto deployment via cloudflare when you push to master
