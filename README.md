@@ -11,4 +11,5 @@ Current Repo for McGill Quantitative Research Club Webpage.
 
 
 auto deployment via cloudflare when you push to master
+
 deployment via gh actions is depracated
