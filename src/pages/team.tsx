@@ -17,14 +17,33 @@ function isExec(position: string): boolean {
 export default function Team() {
   const committees = [
     {
-      name: "Algorithmic Trading",
+      name: "Presidents",
       members: [
         {
           name: "Onur Gul",
-          position: "Co-President, Head of Algorithmic Trading",
+          position: "President",
           field: "U2 Mathematics and Computer Science",
           img: "/2024_members/Onur_Gul.png",
           linkedin: "https://www.linkedin.com/in/onurgul1/" // update with correct URL
+        },
+        {
+          name: "MacLaren Scott",
+          position: "President",
+          field: "U2 Mathematics and Computer Science",
+          img: "/2024_members/Mac.jpeg",
+          linkedin: "https://www.linkedin.com/in/maclarenscott/" // update with correct URL
+        },
+      ],
+    },
+    {
+      name: "Algorithmic Trading",
+      members: [
+        {
+          name: "Ayush Patel",
+          position: "Head of Algorithmic Trading",
+          field: "U2 Software Engineering, Minor in Mathematics",
+          img: "/2024_members/ayush.jpeg",
+          linkedin: "" // update with correct URL
         },
         {
           name: "Theodor Semerdzhiev",
@@ -46,20 +65,61 @@ export default function Team() {
       name: "Data Science",
       members: [
         {
-          name: "MacLaren Scott",
-          position: "Co-President, Head of Data Science",
-          field: "U2 Mathematics and Computer Science",
-          img: "/2024_members/Mac.jpeg",
-          linkedin: "https://www.linkedin.com/in/maclarenscott/" // update with correct URL
+          name: "Danyl Satanovskyi",
+          position: "Head of Data Science",
+          field: "U2 Honours Mathematics and Computer Science",
+          img: "/2024_members/danyl.jpg",
+          linkedin: "" // update with correct URL
         },
         {
-          name: "Murad Ismayilov",
+          name: "Ismael Ndiaye",
           position: "Data Science Researcher",
-          field: "U2 Computer Science - A.I.",
-          img: "/2024_members/Murad.png",
-          linkedin: "https://www.linkedin.com/in/murad-ism/" // update with correct URL
+          field: "U2 Mathematics and Computer Science",
+          img: "/2024_members/ismael.jpg",
+          linkedin: "" // update with correct URL
         },
-        
+        {
+          name: "Ian Couture",
+          position: "Data Science Researcher",
+          field: "U2 Honors Applied Mathematics, Minor in Economics",
+          img: "/2024_members/ian.JPG",
+          linkedin: "" // update with correct URL
+        },
+        {
+          name: "Matthias Nijs",
+          position: "Data Science Researcher",
+          field: "U2 Joint Honours in Economics and Finance",
+          img: "/2024_members/matthias.jpg",
+          linkedin: "" // update with correct URL
+        },
+        {
+          name: "Gavin Xiong",
+          position: "Data Science Researcher",
+          field: "U1 Honors Mathematics and Computer Science",
+          img: "/2024_members/gavin.jpg",
+          linkedin: "" // update with correct URL
+        },
+        {
+          name: "Loovdrish Sujore",
+          position: "Data Science Researcher",
+          field: "U2 Finance, Minor in Computer Science",
+          img: "/2024_members/loovdrish.jpg",
+          linkedin: "" // update with correct URL
+        },
+        {
+          name: "Eric Grigoras",
+          position: "Data Science Researcher",
+          field: "U2 Honours Mathematics and Computer Science",
+          img: "/2024_members/eric.jpg",
+          linkedin: "" // update with correct URL
+        },
+        {
+          name: "Noah Chen",
+          position: "Data Science Researcher",
+          field: "U2 Computer Science",
+          img: "/2024_members/noah.jpeg",
+          linkedin: "" // update with correct URL
+        },
       ],
     },
     {
