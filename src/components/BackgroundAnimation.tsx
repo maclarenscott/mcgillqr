@@ -20,7 +20,7 @@ const BackgroundAnimation: React.FC = () => {
     window.addEventListener('resize', resizeCanvas);
 
     // Time tracking for animations
-    let startTime = Date.now();
+    const startTime = Date.now();
 
     // Create grid points for the line network
     const gridPoints: {
